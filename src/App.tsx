@@ -1,4 +1,3 @@
-import "./App.css";
 import Footer from "./ui/footer";
 import Header from "./ui/header";
 
