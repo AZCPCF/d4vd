@@ -7,6 +7,7 @@ export default function Header() {
   return (
     <header>
       <div id="xx">
+          <h1>nirvana</h1>
         <nav>
           <a
             id="drawer"
@@ -21,7 +22,6 @@ export default function Header() {
           <a>songs</a>
           <a>images</a>
         </nav>
-        <h1>nirvana</h1>
       </div>
       {isActive && (
         <nav id="md-nav">
