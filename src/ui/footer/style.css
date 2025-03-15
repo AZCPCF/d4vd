@@ -1,0 +1,15 @@
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    flex-wrap: wrap;
+    padding: 10px 10px 10px 20px;
+    & h1{
+      color: #747bff;
+    }
+   
+  }
+  
