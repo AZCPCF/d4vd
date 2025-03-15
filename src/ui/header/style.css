@@ -5,6 +5,9 @@ header {
   align-items: center;
   flex-wrap: wrap;
   padding: 10px;
+  & h1{
+    color: #747bff;
+  }
   & #xx {
     width: 100%;
     display: flex;
