@@ -19,6 +19,12 @@
       "image": "bleach.png"
     },
     {
+      "id":5,
+      "title":"Live at Reading",
+      "description":"2009",
+      "image":"liveatreading.png"
+    },
+    {
       "id": 4,
       "title": "In Utero",
       "description": "1993",
