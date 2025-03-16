@@ -1,89 +1,37 @@
-import image from "../public/image.png";
+import { useEffect, useState } from "react";
+import { BASE_URL } from "./api/requests";
+import "./App.css";
 import Footer from "./ui/footer";
 import Header from "./ui/header";
-import "./App.css";
-const cards = [
-  {
-    title: "test",
-    image,
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, distinctio.",
-  },
-  {
-    title: "test",
-    image,
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, distinctio.",
-  },
-  {
-    title: "test",
-    image,
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, distinctio.",
-  },
-  {
-    title: "test",
-    image,
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, distinctio.",
-  },
-];
+
 function App() {
+  const [songs, setSongs] = useState<Array<any>>([]);
+
+  const getData = async () => {
+    const response = await fetch(`${BASE_URL}/albums`);
+    const data = await response.json();
+    setSongs(data);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
-    <div style={{ width: "100%" }}>
+    <div className="app-container">
       <Header />
-      <div style={{ padding: "20px", display: "flex", flexWrap: "wrap" }}>
-        <h1 style={{ width: "100%" }}>albums</h1>
-        {cards?.map(({ description, image, title }, index) => (
-          <div style={{ padding: "20px" }} id="isMd" key={index}>
-            <div
-              style={{
-                width: "100%",
-                height: "300px",
-                borderRadius: "8px",
-                display: "flex",
-                boxShadow: "-1px 2px 3px 1px #8f8d8d31;",
-                justifyContent: "center",
-                alignItems: "center",
-                flexWrap: "wrap",
-                flexDirection: "column",
-                border: "1px solid gray",
-                textAlign: "center",
-              }}
-            >
-              <img src={image} style={{ width: "90%" }} />
-              <h3>{title}</h3>
-              <p style={{ width: "100px", overflow: "hidden", height: "20px" }}>
-                {description}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div style={{ padding: "20px", display: "flex", flexWrap: "wrap" }}>
-        <h1 style={{ width: "100%" }}>songs</h1>
-        {cards?.map(({ description, image, title }, index) => (
-          <div style={{ padding: "20px" }} id="isMd" key={index}>
-            <div
-              style={{
-                width: "100%",
-                height: "300px",
-                borderRadius: "8px",
-                display: "flex",
-                boxShadow: "-1px 2px 3px 1px #8f8d8d31;",
-                justifyContent: "center",
-                alignItems: "center",
-                flexWrap: "wrap",
-                flexDirection: "column",
-                border: "1px solid gray",
-                textAlign: "center",
-              }}
-            >
-              <img src={image} style={{ width: "90%" }} />
-              <h3>{title}</h3>
-              <p style={{ width: "100px", overflow: "hidden", height: "20px" }}>
-                {description}
-              </p>
+      <div className="albums-container">
+        <h1 className="albums-title">Albums</h1>
+        {songs.map((item, index) => (
+          <div className="album-parent" id="isMd">
+            <div className="album-card" key={index}>
+              <img
+                src={`/images/${item?.image}`}
+                alt={item?.title}
+                className="album-image"
+              />
+              <h3 className="album-title">{item?.title}</h3>
+              <p className="album-description">{item?.description}</p>
             </div>
           </div>
         ))}

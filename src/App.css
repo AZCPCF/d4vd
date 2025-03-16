@@ -1,8 +1,60 @@
-#isMd {
-    width: 25%;
-    @media (max-width:900px) {
-        & {
-            width: 100%;
+.app-container {
+    width: 100%;
+}
+  
+  .albums-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .albums-title {
+    width: 100%;
+  }
+  
+  .album-card {
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #302e2e;
+    border: 1px solid gray;
+    box-shadow: -1px 2px 3px 1px rgba(143, 141, 141, 0.2);
+    text-align: center;
+    /* margin: 10px; */
+  }
+  
+  .album-image {
+    width: calc(100% - 10px);
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  .album-parent{
+    padding: 10px;
+  }
+  .album-title {
+    width: 90%;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 10px 0;
+  }
+  
+  .album-description {
+      width: 100px;
+    overflow: hidden;
+    height: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+    #isMd {
+        width: 25%;
+        @media (max-width:899px) {
+            & {
+                width: 100%;
+            }
         }
     }
-}
