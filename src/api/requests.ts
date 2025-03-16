@@ -1,1 +1,1 @@
-export const BASE_URL: string = "https://nirvana-by-azcpcf.vercel.app/api";
+export const BASE_URL: string = "https://nirvana-api.vercel.app/api";
