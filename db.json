@@ -1,0 +1,53 @@
+{
+    "albums": [
+      {
+        "id": 1,
+        "title": "Nevermind",
+        "description": "1991",
+        "image": "nevermind.png"
+      },
+      {
+        "id": 2,
+        "title": "MTV Unplugged in New York",
+        "description": "1994",
+        "image": "unnew.png"
+      },
+      {
+        "id": 3,
+        "title": "Bleach",
+        "description": "1989",
+        "image": "bleach.png"
+      },
+      {
+        "id": 4,
+        "title": "In Utero",
+        "description": "1993",
+        "image": "inutero.png"
+      },
+      {
+        "id": 5,
+        "title": "Live at Reading",
+        "description": "2009",
+        "image": "liveatreading.png"
+      },
+      {
+        "id": 6,
+        "title": "Live at the Paramount",
+        "description": "2019",
+        "image": "liveatpara.png"
+      },
+      {
+        "id": 7,
+        "title": "Live and Loud",
+        "description": "2013",
+        "image": "liveandloud.png"
+      },
+      {
+        "id": 8,
+        "title": "Live On Air 1987",
+        "description": "1987",
+        "image": "liveonair.png"
+      }
+    ]
+  }
+  
