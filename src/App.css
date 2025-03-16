@@ -30,6 +30,7 @@
     width: calc(100% - 10px);
     margin-top: 10px;
     border-radius: 4px;
+    max-height: 400px;
   }
   .album-parent{
     padding: 10px;
