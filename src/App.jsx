@@ -1,6 +1,6 @@
 import { Grid, Link, Skeleton, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { API, skeleton } from "../config";
+import { API, skeleton } from "./config";
 import AlbumCard from "./ui/components/AlbumCard";
 import Header from "./ui/components/Header";
 import { MuiThemeProvider } from "./ui/theme"; // Fixed typo here
