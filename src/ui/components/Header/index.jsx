@@ -15,7 +15,7 @@ import Typography from "@mui/material/Typography";
 import { useState } from "react";
 
 const drawerWidth = 240;
-const navItems = ["Songs", "Albums", "Images"];
+const navItems = ["Songs", "Albums", "Images","GITHUB"];
 
 function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -92,6 +92,7 @@ function Header() {
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
+              backdropFilter:'blur(10px)',
               width: drawerWidth,
             },
           }}
