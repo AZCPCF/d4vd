@@ -24,7 +24,7 @@ const App = () => {
   return (
     <MuiThemeProvider>
       <Header />
-      <Grid container mt={10} px={{ sm: 2, xs: 1 }}>
+      <Grid container mt={10} p={{ sm: 3, xs: 2 }}>
         <Grid
           item
           xs={12}
@@ -59,24 +59,26 @@ const App = () => {
                 <AlbumCardSkeleton />
               </Grid>
             ))
-          : data?.map((item, index) => (
-              <Grid
-                item
-                lg={12 / 5}
-                md={12 / 4}
-                sm={12 / 3}
-                py={{ sm: 0, xs: 1 }}
-                p={{ sm: 1 }}
-                xs={12}
-                key={index}
-              >
-                <AlbumCard
-                  title={item?.title}
-                  description={item?.description}
-                  image={item?.image}
-                />
-              </Grid>
-            ))}
+          : data
+              ?.filter((item, index) => index <= 4)
+              ?.map((item, index) => (
+                <Grid
+                  item
+                  lg={12 / 5}
+                  md={12 / 4}
+                  sm={12 / 3}
+                  py={{ sm: 0, xs: 1 }}
+                  p={{ sm: 1 }}
+                  xs={12}
+                  key={index}
+                >
+                  <AlbumCard
+                    title={item?.title}
+                    description={item?.description}
+                    image={item?.image}
+                  />
+                </Grid>
+              ))}
       </Grid>
     </MuiThemeProvider>
   );
