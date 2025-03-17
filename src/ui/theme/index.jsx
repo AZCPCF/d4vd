@@ -2,11 +2,11 @@ import { createTheme, ThemeProvider } from "@mui/material";
 export const theme = createTheme({
   palette: {
     mode:'dark',
-    background:"#2f2d38",
+    background:"_",
     primary: {
       light:"#75c95d",
       main: '#612fec',
-      dark:"#2e6823",
+      dark:"#2f2d38",
       contrastText: "#fff",
       // title: "rgba(0, 0, 0, 0.26)",
     },
