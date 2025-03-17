@@ -48,7 +48,7 @@ function Header() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" color="primary">
+      <AppBar component="nav" color="primary" sx={{backdropFilter:'blur(10px)'}}>
         <Toolbar sx={{p:{sm:3,xs:2}}}>
           <IconButton
             color="inherit"
