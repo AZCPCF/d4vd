@@ -34,12 +34,14 @@ const App = () => {
           item
           xs={12}
           py={1}
+          pt={2}
           sx={{ pr: { sm: 1 } }}
           container
+          alignItems={'center'}
           justifyContent={"space-evenly"}
         >
           <Typography
-            variant="h6"
+            variant="h4"
             component="div"
             sx={{
               flexGrow: 1,
@@ -88,12 +90,14 @@ const App = () => {
           item
           xs={12}
           py={1}
+          pt={8}
           sx={{ pr: { sm: 1 } }}
           container
+          alignItems={'center'}
           justifyContent={"space-evenly"}
         >
           <Typography
-            variant="h6"
+            variant="h4"
             component="div"
             sx={{
               flexGrow: 1,

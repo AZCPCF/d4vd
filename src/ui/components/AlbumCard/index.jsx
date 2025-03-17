@@ -14,10 +14,10 @@ export default function AlbumCard({ image, title, description }) {
         style={{objectFit:'contain'}}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h6" component="div">
             {title}
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          <Typography variant="body1" sx={{ color: "text.secondary" }}>
             {description}
           </Typography>
         </CardContent>
