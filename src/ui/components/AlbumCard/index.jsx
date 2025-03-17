@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 
 export default function AlbumCard({ image, title, description }) {
   return (
-    <Card sx={{ width: "100%",height:'100%'}}>
+    <Card sx={{ width: "100%",height:'100%',backgroundColor:'primary.dark'}}>
       <CardActionArea sx={{minHeight:'100%'}}>
         <img src={`/images/${image}`}
         alt={title}
