@@ -15,7 +15,7 @@ import Typography from "@mui/material/Typography";
 import { useState } from "react";
 
 const drawerWidth = 240;
-const navItems = ["Songs", "Albums", "Images","GITHUB"];
+const navItems = ["Songs", "Albums", "Images","Github"];
 
 function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
