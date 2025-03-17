@@ -4,8 +4,7 @@ const AlbumCardSkeleton = () => {
   return (
     <>
       <Skeleton variant="rounded" height={300} />
-      <Skeleton variant="text" height={75} sx={{fontSize:'1rem'}}/>
-      <Skeleton variant="rounded" height={100} />
+      <Skeleton variant="rounded" height={100} sx={{mt:1}} />
     </>
   );
 };
