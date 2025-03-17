@@ -101,7 +101,7 @@ const App = () => {
           >
             Songs
           </Typography>
-          <Link href="/albums">more</Link>
+          <Link href="/songs">more</Link>
         </Grid>
         {songsLoading
           ? Array.from({ length: skeleton.home.count }).map((_, index) => (
