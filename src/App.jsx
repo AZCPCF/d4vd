@@ -8,18 +8,15 @@ import AlbumCardSkeleton from "./ui/components/AlbumSkeleton";
 
 const App = () => {
   const [albums, setAlbums] = useState([]);
-  const [albumsLoading, setAlbumsLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [songs, setSongs] = useState([]);
-  const [songsLoading, setSongsLoading] = useState(false);
   const getData = async () => {
-    setAlbumsLoading(true);
+    setLoading(true);
     const albums = await (await fetch(`${API.url}/albums`)).json();
     setAlbums(albums);
-    setAlbumsLoading(false);
-    setSongsLoading(true);
     const songs = await (await fetch(`${API.url}/songs`)).json();
     setSongs(songs);
-    setSongsLoading(false);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -37,7 +34,7 @@ const App = () => {
           pt={2}
           sx={{ pr: { sm: 1 } }}
           container
-          alignItems={'center'}
+          alignItems={"center"}
           justifyContent={"space-evenly"}
         >
           <Typography
@@ -51,7 +48,7 @@ const App = () => {
           </Typography>
           <Link href="/albums">more</Link>
         </Grid>
-        {albumsLoading
+        {loading
           ? Array.from({ length: skeleton.home.count }).map((_, index) => (
               <Grid
                 item
@@ -93,7 +90,7 @@ const App = () => {
           pt={8}
           sx={{ pr: { sm: 1 } }}
           container
-          alignItems={'center'}
+          alignItems={"center"}
           justifyContent={"space-evenly"}
         >
           <Typography
@@ -107,7 +104,7 @@ const App = () => {
           </Typography>
           <Link href="/songs">more</Link>
         </Grid>
-        {songsLoading
+        {loading
           ? Array.from({ length: skeleton.home.count }).map((_, index) => (
               <Grid
                 item
