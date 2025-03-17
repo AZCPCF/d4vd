@@ -49,7 +49,7 @@ function Header() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar component="nav" color="primary">
-        <Toolbar sx={{p:{sm:2,xs:1}}}>
+        <Toolbar sx={{p:{sm:3,xs:2}}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
